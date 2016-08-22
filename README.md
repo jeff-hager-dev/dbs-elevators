@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 # Elevator Hackathon Site #
@@ -29,3 +30,6 @@ The site is served over https with a self signed cert.  This isn't the best user
 ## API ##
 
 There are three routers on the server side that comprise the API.  UploadRouter, LeaderboardRouter, and SecurityRouter.  These expose methods to handle upload (Multer), validation (see services/validationService), and scoring (see services/scoringService).
+=======
+# dbs-elevators
+>>>>>>> d96b2633b4df712bb6b4a876119549186765f98d
