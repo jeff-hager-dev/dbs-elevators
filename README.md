@@ -6,9 +6,7 @@ Site is built on the MEAN stack.  All client code is in client folder, all serve
 
 1. get code
 2. "npm update"
-3. start app.js in the server folder
-
-If all tests pass, create a team and upload the valid.json and invalid.json files to verify all services are working correctly.
+3. start app.js in the server folder 
 
 ## Database ##
 
