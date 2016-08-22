@@ -1,0 +1,440 @@
+/* override bootstrap styles */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+html * {
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+.signInStatus {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  padding-right: 25px;
+  padding-top: 15px;
+  top: 0;
+}
+
+.scoringDetails {
+  margin-top: 30px;
+}
+
+.resizedTextbox {
+  display: block;
+  margin: auto;
+  width: 200px;
+  /*  -moz-border-radius: 1px;
+    -webkit-border-radius: 1px; */
+  padding: 5px;
+}
+
+hr {
+  width: 100%;
+  color: #8AB055;
+  height: 1px;
+  background-color: #8AB055;
+}
+
+p {
+  font-size: 16px !important;
+}
+
+.item-steps {
+  margin-left: 20px;
+}
+
+.list-group-item {
+  display: list-item;
+  background-color: #efefef;
+  border-width: 0;
+}
+
+.submitButton {
+  font-weight: bold;
+  color: #197319;
+}
+
+.jumbotron {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  color: inherit;
+  background-color: #eee;
+}
+
+.greenFontContainer {
+  color: #197319;
+}
+
+.centerit {
+  text-align: left;
+}
+
+.loginForm {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.signInDiv {
+  width: 90%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-align: center;
+}
+
+.submitUploadContainer {
+  border: #197319;
+  border-width: 1px;
+  text-align: left;
+}
+
+.uploadFileChooser {
+  color: #197319;
+  text-align: center;
+}
+
+.nav-stacked {
+  color: #197319;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  color: #197319;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+data {
+  color: #197319;
+}
+
+img.validation {
+  display: inline-block;
+  margin-right: 12px;
+  width: 20;
+  height: 20px;
+}
+
+button.scoreDetail {
+  background-color: #197319;
+  color: #eee;
+}
+
+ul.signIn {
+  padding-right: 200;
+}
+
+ul.validation {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+li.validation {
+  padding: 10px 0 10px 20px;
+  text-indent: -1em;
+  text-align: left;
+}
+
+li.scoringDetail {
+  text-align: center;
+}
+
+img.inline {
+  display: inline-block;
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rules {
+  font-size: 16px;
+}
+
+.ruleNumberedList {
+  text-align: left;
+  font-size: 16px;
+}
+
+.validationTable {
+  color: red;
+}
+
+.timelineTable {
+  color: #197319;
+}
+
+.navbar-form input,
+.form-inline input {
+  width: auto;
+}
+
+.rulesHeader {
+  text-align: left
+}
+
+.validationTitle {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h2 {
+  color: #197319;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table th {
+  text-align: center;
+}
+
+thead {
+  background-color: whitesmoke;
+  color: #197319;
+  text-align: center;
+  border: 2px solid ghostwhite;
+}
+
+tbody {
+  border: 1px solid #197319;
+  color: #197319;
+  background-color: ghostwhite;
+}
+
+body {
+  padding-top: 50px;
+  color: darkslategrey;
+  background-color: #efefef;
+}
+
+h1,
+h2,
+h3,
+.highlight,
+.navbar a,
+#masthead h4 {
+  color: #197319;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #cecece;
+}
+
+#masthead {
+  min-height: 145px;
+  background-color: #8AB055;
+  color: #aaaacc;
+}
+
+#masthead h1 {
+  font-size: 55px;
+  line-height: 1;
+  color: #fefeff;
+  margin-top: 25px;
+  margin-left: 60px;
+}
+
+#masthead .logo {
+  margin-top: 25px;
+  margin-right: 60px;
+}
+
+#topPanel {
+  padding-top: 0px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+#topPanel .panel-body {
+  padding-top: 0px;
+}
+
+.navbar.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top-spacer {
+  background-color: #ffffff;
+  height: 40px;
+}
+
+a,
+a:hover {
+  color: #223344;
+  text-decoration: none;
+}
+
+.icon-bar {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 80px;
+  }
+}
+
+.navbar-bright {
+  background-color: #fff;
+  color: #8AB055;
+  margin-bottom: 0;
+  border-width: 0;
+}
+
+.navbar-bright a,
+.navbar-bright .navbar-brand,
+#masthead h4 {
+  color: #8AB055;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.navbar-bright li > a:hover {
+  background-color: #000044;
+}
+
+.dropdown-menu {
+  min-width: 250px;
+}
+
+.caret {
+  color: #fff;
+}
+
+.navbar-toggle {
+  color: #fff;
+  border-width: 0;
+}
+
+.navbar-toggle:hover {
+  background-color: #fff;
+}
+
+.panel {
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.thumbnail {
+  margin-bottom: 8px;
+}
+
+.img-container {
+  overflow: hidden;
+  height: 170px;
+}
+
+.img-container img {
+  min-width: 280px;
+  min-height: 180px;
+  max-width: 380px;
+  max-height: 280px;
+}
+
+.txt-container {
+  overflow: hidden;
+  height: 100px;
+}
+
+.panel .lead {
+  overflow: hidden;
+  height: 90px;
+}
+
+.label-float {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: .9;
+  padding: 6px;
+  color: #fff;
+}
+
+@-moz-keyframes throbber-loader {
+  0% {
+    background: #dde2e7;
+  }
+  10% {
+    background: #6b9dc8;
+  }
+  40% {
+    background: #dde2e7;
+  }
+}
+@-webkit-keyframes throbber-loader {
+  0% {
+    background: #dde2e7;
+  }
+  10% {
+    background: #6b9dc8;
+  }
+  40% {
+    background: #dde2e7;
+  }
+}
+@keyframes throbber-loader {
+  0% {
+    background: #dde2e7;
+  }
+  10% {
+    background: #6b9dc8;
+  }
+  40% {
+    background: #dde2e7;
+  }
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.throbber-loader:not(:required) {
+  -moz-animation: throbber-loader 2000ms 300ms infinite ease-out;
+  -webkit-animation: throbber-loader 2000ms 300ms infinite ease-out;
+  animation: throbber-loader 2000ms 300ms infinite ease-out;
+  background: #dde2e7;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: 0.9em;
+  height: 1.5em;
+  margin: 0 1.6em;
+}
+.throbber-loader:not(:required):before, .throbber-loader:not(:required):after {
+  background: #dde2e7;
+  content: '\x200B';
+  display: inline-block;
+  width: 0.9em;
+  height: 1.5em;
+  position: absolute;
+  top: 0;
+}
+.throbber-loader:not(:required):before {
+  -moz-animation: throbber-loader 2000ms 150ms infinite ease-out;
+  -webkit-animation: throbber-loader 2000ms 150ms infinite ease-out;
+  animation: throbber-loader 2000ms 150ms infinite ease-out;
+  left: -1.6em;
+}
+.throbber-loader:not(:required):after {
+  -moz-animation: throbber-loader 2000ms 450ms infinite ease-out;
+  -webkit-animation: throbber-loader 2000ms 450ms infinite ease-out;
+  animation: throbber-loader 2000ms 450ms infinite ease-out;
+  right: -1.6em;
+}
+

@@ -1,0 +1,29 @@
+<div class="container">
+    <hr/>
+    <img class="center img-responsive" src="\img\hackathon_stl_lg.png">
+    <hr />
+    <h3 rulesHeader><img class="inline img-responsive" src="\img\elevator.png">Submit</h3>
+
+    <div class="jumbotron greenFontContainer">
+
+        <div class="row" ng-show="loading">
+            <div class="col-sm-12">
+                <div class="throbber-loader" ng-show="loading">Processing... </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="!loading">
+
+            <div class="col-sm-8">
+                <p class="lead text-justify explanationText">Submit an entry for {{login}}. You will be redirected to details or any validation errors or scoring detail after processing.
+                </p>
+            </div>
+            <div class="col-sm-4" class="data">
+                <button type="file" ngf-select="uploadFiles($file, $invalidFiles)" ngf-max-height="1000" ngf-max-size="15MB">
+      Select File</button> {{errorMsg}}
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,220 @@
+<div class="container">
+    
+    <img class="center img-responsive" src="\img\hackathon_stl_horz.png">
+    
+    <div>
+        <div class="jumbotron ">
+            <h3>Contest Description & Rules</h3>
+            <hr />
+
+            <blockquote>
+                <p class="explanationText">How hard can it be to program a damn elevator?</p>
+                <small>Steve, frustrated waiting for an elevator</small>
+            </blockquote>
+        </div>
+        <h3 class="rulesHeader"><img class="inline img-responsive" src="\img\elevator.png">    The Challenge</h3>
+        <p class="rules text-justify">
+            It turns out it is harder than you might think. The coding challenge presented is to develop an algorithim that given a set of elevator requests 
+            can schedule them in the most effecient manner. The team that can deliver all passengers in the least amount of time is the winner.
+        </p>
+
+        <h3 class="rulesHeader"><img class="inline img-responsive" src="\img\elevator.png">    Contest Timeline</h3>
+        <p class="rules text-justify">8:00 AM – Breakfast and Team Formation [Room: Blues (DBS 4th Floor)] </p>
+        
+        <ul>
+            <li>Breakfast & Team Formation</li>
+            <li>Will: Hackathons and Daugherty’s Goals </li>
+            <li>Will: Outline the day’s schedule</li>
+            <li>Will: Introduce</li>
+        </ul>
+        
+        <p class="rules text-justify">8:30 AM – Kickoff [Room: Blues (DBS 4th Floor)]</p>
+                
+        <ul>
+            <li>Steve: Presenting the Problem</li>
+            <li>Matt & Brad: Technical Framework & Solution Submission</li>
+            <li>Open Q&A</li>
+            <li>Team Registration & Room Assignments</li>
+        </ul>
+        
+        <p class="rules text-justify">9:00 AM – Go!</p>
+        
+        <ul>
+            <li>Teams will be released to go get started</li>
+        </ul>
+        
+        <p class="rules text-justify">11:30 AM – 12:30 PM Lunch</p>
+        
+        <ul>
+            <li>Lunch will be provided. TBD. Take a break and eat, or grab food to go</li>
+        </ul>
+        
+        <p class="rules text-justify">2:00 PM – 3:00 PM – Checkpoint 1</p>
+        
+          <ul>
+            <li>Each team will have a scheduled brief review to make sure people are on track and don’t need anything. The scheduled slot for each team will be provided before lunch.</li>
+        </ul>
+        
+        
+        <p class="rules text-justify">05:00 PM – Dinner </p>
+        
+               <ul>
+            <li>Same as lunch. TBD</li>
+        </ul>
+        
+        
+        <p class="rules text-justify">08:00 PM – 08:45 PM – Final Review</p>
+        
+               <ul>
+            <li>Each team will have a scheduled final review. This will include cursory code inspection, and final solution generation and submission</li>
+        </ul>
+        
+        <p class="rules text-justify">08:45 PM – 09:00 PM</p>
+        
+            <ul>
+                   <li>Announcements and Prizes</li>
+                     <li>Closing Remarks</li>
+            </ul>
+        
+        <p class="rules text-justify">Saturday (During Summit Session) </p>
+    
+            <ul>
+                   <li>Review Winning Solution</li>
+                     <li>Open Retrospective</li>
+                     <li>Hackathon Planning for Upcoming Hackathons</li>
+            </ul>
+    
+    <!--    <h3 class="rulesHeader"><img class="inline img-responsive" src="\img\elevator.png">    Competition Instructions</h3>
+        <div>
+            <ol class="item-steps list-group">
+                <li class="list-group-item ruleNumberedList">Name your team and let Will, Matt, or Brad know your creative choice</li>
+                <li class="list-group-item ruleNumberedList">Review the Rules and Data Format sections of this page</li>
+                <li class="list-group-item ruleNumberedList">Code a solution</li>
+                <li class="list-group-item ruleNumberedList">Submit an entry & check leaderboard</li>
+                <li class="list-group-item ruleNumberedList">Improve algorithim, resubmit</li>
+            </ol>
+        </div>
+-->
+
+
+        <h3 class="rulesHeader"><img class="inline img-responsive" src="\img\elevator.png">    Description & Data Format</h3>
+        <div>
+            <p class="rules text-left"> On the <a href="/data">Data</a> page you will be provided with JSON describing a building, elevators and requests by people moving from floor to floor.
+            </p>
+
+            <p class="rules text-left"> The JSON for each challenge will look like this: </p>
+
+
+            <pre>
+             {
+                 "challengeId": 1,
+                 "challengeDesc": "normal day traffic",
+                 "isActive": 1,
+                 "minFloor": 1,
+                 "maxFloor": 12,
+                 "numberOfElevators": 3,
+                 "maxCapacity": 15,
+                 "secondsPerFloor": 2,
+                 "secondsPerFloorOverTenFloors": 1,
+                 "timeToOpenDoor": 5,
+                 "timeToCloseDoor": 5,
+                 "calls": [{
+                     "callId": 1,
+                     "callTime": 43,
+                     "startFloor": 1,
+                     "endFloor": 11
+                 }, ]
+             }
+            </pre>
+
+            <p class="rules text-left"> The metadata describing the elevators should be self explanatory. The array of calls represent the buttons being pushed by people througout the day. The callId is a unique key. The callTime is the time in seconds from the start of the time
+                period. The start floor and end floors determine the trip. </p>
+
+            <p class="rules text-left"> You must provide back data in this format: </p>
+
+            <pre>
+            {
+                "challengeId": 1, 
+                "stops": 
+                  [
+                    {
+                      "StopId": Number,
+                      "ElevatorId": Number,
+                      "Floor": Number,
+                      "Pickup": [Number],
+                      "DropOff": [Number]
+                    },
+                  ]
+            } 
+                      </pre>
+        </div>
+
+        <p class="rules text-left">The StopId is a unique key that specifies the order in which the elevator will move. The ElevatorId is the number of the elevator (1-N) as specified in numberOfElevators provided in the input dataset. The Floor indicates where the elevator has
+            been moved to. Pickup is an array of callId, indicating which passengers are being picked up on that floor. Dropoff is of course then an array of callId where passengers have been delivered.
+        </p>
+
+        <p class="rules text-left">Your program must generate an output file that picks up and then drops off every passenger without exceeding elevator max capacity.  Be careful not to tie your design too closely to the initial dataset, as the other datasets may simulate different scenarios.
+        </p>
+
+        <p class="rules text-left">The dataset will be submitted by uploading on the <a href="\upload">Submit</a> page.  After you submit you will receive details on how your score was calculated or details on why your
+            upload did not pass vaidation. You can always check where your team stands on the <a href="\leaderboard">leaderboard</a> page.
+
+        </p>
+
+        <p class="rules text-left">
+            For example, consider a simple example with an input of:
+        </p>
+        <pre>
+                {
+                  "callId": 416,
+                  "callTime": 1912,
+                  "startFloor": 2,
+                  "endFloor": 7
+                }
+         </pre>
+
+        <p class="rules text-left">
+            Let's suppose elevator 2 was last moved to floor 5 and your program chooses this elevator to answer the call. We will assume 2 seconds of travel per floor and 5 seconds to open/close and 8 seconds to load and that your program produced the following:
+        </p>
+        <pre>
+                {
+                  "StopId": n,
+                  "ElevatorId": 2,
+                  "Floor": 5,
+                  "Pickup": null,
+                  "Dropoff": null
+                },  
+                {
+                  "StopId": n + 1,
+                  "ElevatorId": 2,
+                  "Floor": 2,
+                  "Pickup": [416],
+                  "Dropoff": null
+                },
+                {
+                  "StopId": n + 2,
+                  "ElevatorId": 2,
+                  "Floor": 7,
+                  "Pickup": null,
+                  "Dropoff": [416]
+                },
+         </pre>
+
+        <p class="rules text-left">
+            This would be scored at 39 seconds: 1) Move floor 5 to 2 (6 seconds) 2) Open door on 2 (5 seconds) 3) Load on 2 (8 seconds) 4) Close door on 2 (5 seconds) 5) Move floor 2 to 7 (10 seconds) 6) Open door on 7 (5 seconds)
+        </p>
+
+        <h3 class="rulesHeader"><img class="inline img-responsive" src="\img\elevator.png">    Rules & Notices</h3>
+        <div>
+            <ol class="item-steps list-group">
+                <li class="list-group-item ruleNumberedList">Use any technology you would like to</li>
+                <li class="list-group-item ruleNumberedList">You will be provided with 3 datasets during the course of the competion to test against.  You can check your results against the other teams on the leaderboard page.</li>
+                <li class="list-group-item ruleNumberedList">Winners will be determined by a final dataset made available only at the end of the contest.  Prizes will also be offered for the most creative solution.</li>
+            </ol>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>

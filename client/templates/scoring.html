@@ -1,0 +1,42 @@
+<img class="center img-responsive" src="\img\hackathon_stl_stack.png">
+
+<div class="container">
+    <container class="jumbotron">
+
+        <h3 class="h2">Valid Entry  </h3>
+
+        <p class="lead">
+            {{teamScore.avgWaitTime }} average trip time in {{ teamScore.numberOfStops }} stops
+        </p>
+
+        <p class="lead">
+            Check where you placed on the <a href="/leaderboard">leaderboard</a>
+        </p>
+
+        <div class="row" ng-repeat="detail in scoringDetails">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"><img class="validation img-responsive" src="\img\success.png"></div>
+            <div class="col-xs-2">Call {{ detail.callId }} </div>
+            <div class="col-xs-2">Elevator {{ detail.elevatorId }} </div>
+            <div class="col-xs-2">Time {{ detail.waitTime }}</div>
+
+            <div class="col-xs-2">
+                <button type="button" class="btn-default scoreDetail" data-toggle="collapse" data-target="#detail{{detail.callId}}">
+                            Details
+                        </button>
+            </div>
+            <div class="col-xs-1"></div>
+        
+            <div class="row scoringDetails">
+                <div class="collapse" id="detail{{detail.callId}}">
+                    <ul class="nav nav-list">
+                        <li class="active scoringDetail" ng-repeat="calc in detail.detail">
+                            {{calc}}
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </container>
+</div>

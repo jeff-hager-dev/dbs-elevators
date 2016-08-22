@@ -1,0 +1,43 @@
+<div class="container">
+    <hr />
+    <img class="center img-responsive" src="\img\hackathon_stl_stack.png">
+    <hr />
+    <container class="jumbotron">
+
+        <h3 class="rulesHeader"><img class="inline img-responsive" src="..\img\elevator.png">Leaderboard</h3>
+        <table id="leaderboardTable" class="table  table-hover table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Team Name</th>
+                    <th>Sample 1</th>
+                    <th>Sample 2</th>
+                    <th>Sample 3</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="leader in leaderboard">
+                    <td>
+                        {{leader.place}}
+                    </td>
+                    <td>
+                        {{leader.team}}
+                    </td>
+                    <td>
+                        {{leader.challengeOneAvg}}
+                    </td>
+                    <td>
+                        {{leader.challengeTwoAvg}}
+                    </td>
+                    <td>
+                        {{leader.challengeThreeAvg}}
+                    </td>
+                    <td>
+                        {{leader.totalAverage}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </container>
+</div>

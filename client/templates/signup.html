@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <hr/>
+    <img class="center img-responsive" src="\img\hackathon_stl_lg.png">
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <h4 class="text-center"><img class="inline img-responsive" src="\img\elevator.png">Create your team</h4>
+
+            <div class="signIn">
+                <form class="sign-in-up-form" role="form">
+
+                    <div class="form-group">
+                        <input class="form-control resizedTextbox" id="userName" ng-model="userName" type="text" placeholder="Enter team name">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control resizedTextbox" id="password" ng-model="password" type="password" placeholder="Password">
+                    </div>
+
+                    <button class="btn btn-success btn-block resizedTextbox" ng-click="createTeam()" type="submit">Sign Up</button>
+
+                    <section class="sign-in-up-links text-center">
+                        <p>Already have an account? <a href="#/signin">Sign In here</a></p>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
